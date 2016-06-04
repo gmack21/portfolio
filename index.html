@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabi MacKay</title>
+    <link rel="shortcut icon" href="">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css'>
+    <style>
+        body {
+            background-color: lightgray;
+        }
+        #toprow {
+            background-color: black;
+            height: 70px;
+            font-size: 25px;
+            color:aqua;
+            font-family: 'Oswald';
+        }
+        #img {
+            height: 100px;
+            width: 100px
+        }
+        #content {
+            font-size: 25px;
+            font-family: 'Oswald';
+        }
+        a {
+            font-size: 25px;
+            font-family: 'Oswald';
+        }
+        a:hover{
+            color: aqua;
+        }
+        a:active{
+            color: darkmagenta;
+        }
+        #profile {
+            border: 2px black solid;
+            max-width: 60%;
+            height: auto;  
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class = "container">
+  <div class = "row" id = "toprow">Gabi MacKay</div>
+    <div class = "col-xs-3"></div>
+    <div class = "col-xs-9"></div>
+    <div class = "row"></div>
+     <div class = "col-xs-3">
+         <a onclick = "homePage()">Home</a><br/>  
+        <a onclick = "aboutPage()">About</a><br/> 
+        <a onclick = "workPage()">Work Experience</a><br/> 
+        <a onclick = "contactPage()">Contact Me</a> 
+    
+    </div>
+    <div class = "col-xs-9" id="content"></div>
+        </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    
+    <script>
+//init function that calls page load or home page
+//function that loads content for about page when button is clicked
+//function that loads content for work page when button is clicked
+//function that loads content for contact page when button is clicked
+        
+    function init()
+        {
+            homePage();
+        }
+function homePage(){
+    var content = " ";
+    content += '<h3>Welcome to my website. Please enjoy and remember to connect with me on social media.</h3>';
+    content += '<img id = "profile" class = "img-responsive img-circle" src = "img/Gmackay_03.jpg" alt = "Gabi MacKay"/>'; 
+    
+    document.getElementById("content").innerHTML = content;
+    
+}        
+        
+function aboutPage(){
+    var content = " ";
+    content += "<h3>My name is Gabi MacKay</h3><p>I am currently a student at CodeCraft. We are finishing our second week in our 20-week";
+    content += " part-time full-stack training. I enjoy the design aspect of developing but I'm really interested in diving into JavaScript and"; 
+    content += " creating interactive sites. My interests outside of class include:</p>";
+    content += "<ul>";
+    content += "<li>Listening to folk, funk or classical music</li>";
+    content += "<li>Researching recipes and cooking</li>";
+    content += "<li>Caring for my lemon tree and other gardening projects</li>";
+    content += "<li>Indoor rock climbing</li>";
+    content += "<li>Any water activity, especially kayaking or canoeing</li>";
+    content += "<li>Empowering women and gender equality</li>";
+    content += "<li>Visiting new places</li>";
+    content += "</ul>";
+    content += "<p>I'm originally from Iowa City, IA and have a soft spot for the Midwest and its people.</p></div>";
+    
+    document.getElementById('content').innerHTML = content;
+}        
+   
+function workPage(){
+  var content = "";
+content += "<p>In a few short weeks, following my completion of CodeCraft's program, I will have working knowledge of the"; 
+content += "following technologies:</p>";
+content += "<ul>";
+content += "<li>HTML/HTML5 and CSS</li>";
+content += "<li>Javascript</li>";
+content += "<li>Boostrap 3</li>";
+content += "<li>jQuery</li>";
+content += "<li>Node.js</li>";
+content += "<li>Angular.js</li>";
+content += "<li>Express.js</li>";
+content += "<li>MongoDB</li>";
+content += "<li>SQL</li>";
+content += "<li>Heroku</li></ul>";
+content += "<p>I am currently the Finance Manager at <a href = \"http://www.transleaseinc.com\">Transwest Truck Trailer RV.</a> ";
+content += "I have experience ranging from sustainable garden development to catering large events to tackling the emotional and ";
+content += "educational woes of college freshman as a Resident Advisor. </p>";
+    document.getElementById('content').innerHTML = content;
+}
+        
+function contactPage(){
+    var content = '';
+content += '<div class="col-xs-6"><p class="text">Link, Follow or Friend</p>';
+content += '<a href="https://www.facebook.com/gabi.mackay"><img id="img" src="img/fb2.jpg" alt="facebook icon"/></a>';
+content += '<a href="https://www.linkedin.com/in/gabriellemackay"><img id="img" src="img/li2.png" alt="linkedin icon"/></a>';
+content += '<a href="https://www.instagram.com/gmtmack/"><img id="img" src="img/insta.png" alt="instagram icon"/></a>';
+content += '<a href="https://twitter.com/gmtmack"><img id="img" src="img/twitter.png" alt="twitter icon"/></a>';
+content += '</div>';         
+content += '<div class="col-xs-6"><div class="form-group"><label for="usr" class="text">Name:</label><input type="text"'; 
+content += 'class="form-control" id="usr"></div>';
+content += '<div class="form-group"><label for="email" class="text">Email:</label><input type="password" class="form-control" id="pwd"></div>';
+content += '<div class="form-group"><label for="comment" class="text">Looking forward to hearing from you!</label>';
+content += '<textarea class="form-control" rows="5" id="comment"></textarea></div>';
+content += '<button type="button" class="btn btn-default text">Submit</button></div>';
+document.getElementById('content').innerHTML = content;
+        
+}
+        
+       
+     init();
+        
+        
+    
+    
+    
+    
+    </script>
+</body>
+</html>
